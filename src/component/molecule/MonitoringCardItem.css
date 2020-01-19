@@ -1,0 +1,18 @@
+.MonitoringCardItem {
+    pointer-events:all;
+    width : 700px;
+    margin-bottom: 12px;
+    position: relative;
+}
+.MonitoringCardItem-title{
+    min-width : 275px;
+}
+
+.MuiCard-root {
+    display: inline-block;
+    overflow: hidden;
+}
+.container{
+    height: auto;
+    width: auto;
+}
