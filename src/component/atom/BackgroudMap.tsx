@@ -52,10 +52,12 @@ export default class BackgroudMap extends React.Component<Props, State> {
                     center={this.props.rootStore.backGroundMapStore.getLatLngTuple}
                     zoom={this.props.rootStore.backGroundMapStore.getZoom}>
                     <TileLayer
-                        attribution={'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
-                            '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-                            'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'}
-                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        attribution={'<a href="https://wikimediafoundation.org/wiki/Maps_Terms_of_Use">Wikimedia</a>'}
+                        url="https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}{r}.png"
+                    />
+                    <TileLayer
+                        attribution={'Map data: &copy; <a href="http://www.openseamap.org">OpenSeaMap</a> contributors'}
+                        url="https://tiles.openseamap.org/seamark/{z}/{x}/{y}.png"
                     />
                     <Marker position={this.props.rootStore.backGroundMapStore.getLatLngTuple} icon={myIcon} />
                 </Map>

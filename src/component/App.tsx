@@ -8,6 +8,7 @@ import MonitoringCardItem from './molecule/MonitoringCardItem';
 import { Container } from '@material-ui/core';
 import BoardNavigationMonitoring from './organisms/boardnavigationmonitoring/BoardNavigationMonitoring';
 import BoardMonitoringGrid from './organisms/boarmonitoringgrid/BoardMonitoringGrid';
+import TemporaryDrawer from './TemporaryDrawer';
 
 
 export interface IAppProps {
@@ -21,7 +22,7 @@ export default class App extends React.Component<IAppProps> {
     var lat: number = this.props.rootStore.backGroundMapStore.getLatLngTuple[0];
     return (
       <div>
-        <PersistentDrawerLeft />
+        <TemporaryDrawer />
         <BoardNavigationMonitoring rootStore={this.props.rootStore}></BoardNavigationMonitoring>
         <BackgroudMap rootStore={this.props.rootStore} />
       </div>
